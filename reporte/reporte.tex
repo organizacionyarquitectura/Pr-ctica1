@@ -1,8 +1,11 @@
-%Margenes, idioma y tipo de documento
+% Margenes, idioma y tipo de documento
 \documentclass{article}
 \usepackage[spanish]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage[margin = 1.5cm]{geometry}
+
+% Descripciones para las tablas
+\usepackage{caption}
 
 \begin{document}
     
@@ -28,16 +31,114 @@
         \item {
             Identifica cuales de las pruebas miden el tiempo de respuesta y 
             cuales miden el rendimiento.
+
+            \begin{itemize}
+                \item {
+                    GZip Compression \\
+                    Description: This test measures the time needed to 
+                    archive/compress two copies of the Linux 4.13 kernel source 
+                    tree using Gzip compression.\\
+                    Por lo que es una prueba de tiempo de respuesta.
+
+                }
+                \item {
+                    DCRAW \\
+                    Description: This test times how long it takes to convert 
+                    several high-resolution RAW NEF image files to PPM image 
+                    format using dcraw.\\
+                    Por lo que es una prueba de tiempo de respuesta.
+                }
+                \item {
+                    FLAC Audio Encoding \\
+                    Description: This test times how long it takes to encode a 
+                    sample WAV file to FLAC format five times.\\
+                    Por lo que es una prueba de tiempo de respuesta.
+                }
+                \item {
+                    GnuPG \\
+                    Description: This test times how long it takes to encrypt 
+                    a file using GnuPG. \\
+                    Por lo que es una prueba de tiempo de respuesta.
+                }
+                \item {
+                    REDIS \\
+                    Description: Redis is an open-source data structure server.\\
+                    Como es un servidor, probablemente la prueba sea de 
+                    rendimiento, donde mide la cantidad de peticiones en un 
+                    determinado tiempo.
+                }
+                \item {
+                    MAFFT \\
+                    Description: This test performs an alignment of 100 
+                    pyruvate decarboxylase sequences.\\
+                    Por lo que es una prueba de tiempo de respuesta.
+                }
+                \item {
+                    Bayes Analysis \\
+                    Description: This test performs a bayesian analysis of a 
+                    set of primate genome sequences in order to estimate their 
+                    phylogeny.\\
+                    Por lo que es una prueba de tiempo de respuesta.
+                }
+                \item {
+                    MPlayer \\
+                    Description: This test times how long it takes to build 
+                    the MPlayer media player program.\\
+                    Por lo que es una prueba de tiempo de respuesta.
+                }
+                \item {
+                    PHP \\
+                    Description: This test times how long it takes to build PHP
+                    5 with the Zend engine. \\
+                    Por lo que es una prueba de tiempo de respuesta.
+
+                }
+            \end{itemize}
         }
         \item {
             Usando la medida de tendencia central adecuada y tu reporte de 
             resultados, calcula
             \begin{itemize}
                 \item {
-                    La medida de tiemp de respuesta.
+                    La medida de tiempo de respuesta.
+
+                    \begin{table}[]
+                        \caption*{Datos de tiempo de respuesta}
+                        \begin{center}
+                            \begin{tabular}{|l|l|l|}
+                                \hline
+                                ID           & 1       & 2       \\ \hline
+                                REDIS\_LPOP  & 1211506 & 2115110 \\ \hline
+                                REDIS\_SADD  & 1027961 & 1710230 \\ \hline
+                                REDIS\_LPUSH & 870849  & 1342941 \\ \hline
+                                REDIS\_GET   & 1361435 & 2133463 \\ \hline
+                                REDIS\_SET   & 951458  & 1492232 \\ \hline
+                                Media arit   & 1084641.8 & 1758795.2 \\ \hline
+                            \end{tabular}
+                        \end{center}
+                    \end{table}
                 }
                 \item {
-                    La medidad de rendimiento.
+                    La medida de rendimiento.\\
+
+                    \begin{table}[]
+                        \caption*{Datos de rendimiento}
+                        \begin{center}
+                            \begin{tabular}{|l|l|l|}
+                                \hline
+                                ID           & 1       & 2       \\ \hline
+                                GZip         & 59.49   & 46.43   \\ \hline
+                                DCRAW        & 67.86   & 53.56   \\ \hline
+                                FLAC         & 19.93   & 13.49   \\ \hline
+                                GnuPG        & 18.99   & 14.26   \\ \hline
+                                MAFFT        & 11.21   & 8.73    \\ \hline
+                                MrBayes      & 763     & 625     \\ \hline
+                                MPlayer      & 3.49    & 2.84    \\ \hline
+                                PHP          & 295     & 218     \\ \hline
+                                Media arm & 15.53 & 12.17 \\ \hline
+                            \end{tabular}
+                        \end{center}
+                    \end{table} 
                 }
             \end{itemize}
             
