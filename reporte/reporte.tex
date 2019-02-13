@@ -3,6 +3,10 @@
 \usepackage[spanish]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage[margin = 1.5cm]{geometry}
+\usepackage{booktabs}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{tabularx}
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}
 
 % Descripciones para las tablas
 \usepackage{caption}
@@ -21,7 +25,31 @@
 
     \maketitle
 
-    %Problemas
+    %Resultados
+    
+    %Tabla de propiedades de computadoras
+\begin{table}
+\caption*{Propiedades de las computadoras utilizadas}
+\begin{tabularx}{\linewidth}{|L|L|L|L|L|}
+\hline
+Propiedad/Pc                                   & \cellcolor[HTML]{F8A102}{\color[HTML]{000000} A(Alan)} & \cellcolor[HTML]{FFFE65}{\color[HTML]{000000} B(César)}     & \cellcolor[HTML]{34FF34}{\color[HTML]{000000} C(Edgar)}                & \cellcolor[HTML]{9698ED}{\color[HTML]{000000} D(Sandra)} \\ \hline
+\cellcolor[HTML]{DAE8FC}Procesador             & Intel Celeron N2840 @ 2.58GHz (2 Cores)                & AMD Athlon II P340 @ 2.20GhZ (2 Cores)                      & Intel Core i5-5200U @ 2.70GHz (2 Cores/ 4 Threads)                     & Intel Core i5-7200U @ 3.10GHz (2 Cores/ 4 Threads)       \\ \hline
+\cellcolor[HTML]{DAE8FC}Motherboard            & HP 220F v57.51(F.36 BIOS)                              & LENOVO Guam (36CN17WWV2.03 BIOS)                            & Acer ZORO BH (V1.37 BIOS)                                              & Dell 06K7YG (1.7.5 BIOS)                                 \\ \hline
+\cellcolor[HTML]{DAE8FC}Chipset                & Intel Atom Z36xxx/Z37xxx                               & AMD RS880                                                   & Intel Broadwell-U-OPI                                                  & Intel Xeon E3-1200 v6/7th                                \\ \hline
+\cellcolor[HTML]{DAE8FC}Memoria                & 4096MB                                                 & 8192MB                                                      & 12288MB                                                                & 16384MB                                                  \\ \hline
+\cellcolor[HTML]{DAE8FC}Disk                   & 500GB Seagate ST500LT012-1DG14                         & 250GB Samsung SSD 860                                       & 1000GB TOSHIBA MQ01ABD1                                                & 500GB Seagate ST500LM021-1KJ15                           \\ \hline
+\cellcolor[HTML]{DAE8FC}Graficos               & Intel Atom Z36xxx/Z37xxx \& Display (792MHz)           & AMD Mobility Radeon HD 4225/4250 256MB                      & Intel HD 5500 3072MB (900MHz)                                          & Intel HD 620 (1000MHz)                                   \\ \hline
+\cellcolor[HTML]{DAE8FC}Audio                  & Realtek ALC3227                                        & Realtek ALC259                                              & Intel Broadwell-U Audio                                                & Realtek ALC3246                                          \\ \hline
+\cellcolor[HTML]{DAE8FC}Network                & Realtek RTL8101/2/6E + Qualcomm Atheros AR9485         & Qualcomm Atheros AR8152 v1.1 Fast + Qualcomm Atheros AR9285 & Realtek RTL8111/8168/8411 + Qualcomm Atheros QCA9377 802.11ac Wireless & Intel I219-LM + Qualcomm Atheros QCA6174 802.11ac        \\ \hline
+\cellcolor[HTML]{DAE8FC}OS                     & elementary 5.0                                         & Ubuntu 18.04                                                & Fedora 29                                                              & Ubuntu 18.04                                             \\ \hline
+\cellcolor[HTML]{DAE8FC}Kernel                 & 4.15.0-36-generic (x86\_64)                            & 4.15.0-45-generic (x86\_64)                                 & 4.20.4-200.fc29.x86\_64 (x86\_64)                                      & 4.15.0-45-generic (x86\_64)                              \\ \hline
+\cellcolor[HTML]{DAE8FC}Display Server         & X Server 1.19.6                                        & X Server 1.19.6                                             & X Server 1.20.3                                                        & X Server 1.19.6                                          \\ \hline
+\cellcolor[HTML]{DAE8FC}Display Driver         & modesetting 1.19.6                                     & modesetting 1.19.6                                          & modesetting 1.20.3                                                     & modesetting 1.19.6                                       \\ \hline
+\cellcolor[HTML]{DAE8FC}Compilador             & GCC 7.3.0 + Clang 6.0.0-1ubuntu2                       & GCC 7.3.0                                                   & GCC 8.2.1 20181515                                                     & GCC 7.3.0                                                \\ \hline
+\cellcolor[HTML]{DAE8FC}Sistema de Archivos    & ext4                                                   & ext4                                                        & ext4                                                                   & ext4                                                     \\ \hline
+\cellcolor[HTML]{DAE8FC}Resolución de pantalla & 1366x768                                               & 1366x768                                                    & 1366x768                                                               & 1366x768                                                 \\ \hline
+\end{tabularx}
+\end{table}
 
 
     \section{Ejerccios}
@@ -104,40 +132,31 @@
 
                     \begin{table}[]
                         \caption*{Datos de tiempo de respuesta}
-                        \begin{center}
-                            \begin{tabular}{|l|l|l|}
-                                \hline
-                                ID           & 1       & 2       \\ \hline
-                                REDIS\_LPOP  & 1211506 & 2115110 \\ \hline
-                                REDIS\_SADD  & 1027961 & 1710230 \\ \hline
-                                REDIS\_LPUSH & 870849  & 1342941 \\ \hline
-                                REDIS\_GET   & 1361435 & 2133463 \\ \hline
-                                REDIS\_SET   & 951458  & 1492232 \\ \hline
-                                Media arit   & 1084641.8 & 1758795.2 \\ \hline
-                            \end{tabular}
-                        \end{center}
+                        \begin{tabular}{|l|l|l|l|l|l|l|l|l|}
+						\toprule
+						Pc / Tareas & \cellcolor[HTML]{DAE8FC}build-mplayer & \cellcolor[HTML]{DAE8FC}build-php & \cellcolor[HTML]{DAE8FC}compress-gzip & \cellcolor[HTML]{DAE8FC}dcraw  & \cellcolor[HTML]{DAE8FC}encode-flac & \cellcolor[HTML]{DAE8FC}gnupg & \cellcolor[HTML]{DAE8FC}mafft & \cellcolor[HTML]{DAE8FC}mrbayes  \\ \hline
+						\cellcolor[HTML]{F8A102}{\color[HTML]{000000}} A (Alan)    & 422.32        & 831.64    & 96.77         & 201.06 & 44.19       & 37.29 & 27.64 & 2548.70  \\ \hline
+						\cellcolor[HTML]{FFFE65}{\color[HTML]{000000}}B (César)   & 5.84             & 547.82         & 78.23             & 160.81      & 50.04           & 41.71     & 24.60     & 1886.59        \\ \hline
+						\cellcolor[HTML]{34FF34}{\color[HTML]{000000}}C (Edgar)   & 3.49          & 295       & 59.49         & 67.86  & 19.93       & 18.99 & 11.21 & 762.99   \\ \hline
+						\cellcolor[HTML]{9698ED}{\color[HTML]{000000} D(Sandra)}  & 2.84          & 217.87    & 47.53         & 53.56  & 13.49       & 14.26 & 8.73  & 625.15   \\ \hline
+\end{tabular}
                     \end{table}
                 }
+                
+                
+                
                 \item {
                     La medida de rendimiento.\\
-
                     \begin{table}[]
                         \caption*{Datos de rendimiento}
-                        \begin{center}
-                            \begin{tabular}{|l|l|l|}
-                                \hline
-                                ID           & 1       & 2       \\ \hline
-                                GZip         & 59.49   & 46.43   \\ \hline
-                                DCRAW        & 67.86   & 53.56   \\ \hline
-                                FLAC         & 19.93   & 13.49   \\ \hline
-                                GnuPG        & 18.99   & 14.26   \\ \hline
-                                MAFFT        & 11.21   & 8.73    \\ \hline
-                                MrBayes      & 763     & 625     \\ \hline
-                                MPlayer      & 3.49    & 2.84    \\ \hline
-                                PHP          & 295     & 218     \\ \hline
-                                Media arm & 15.53 & 12.17 \\ \hline
+                        \begin{tabular}{|l|l|l|l|l|l|}
+								\toprule
+								Pc / Tareas & \cellcolor[HTML]{DAE8FC}redis(LPOP) & \cellcolor[HTML]{DAE8FC}redis(SADD) & \cellcolor[HTML]{DAE8FC}redis(LPUSH) & \cellcolor[HTML]{DAE8FC}redis(GET) & \cellcolor[HTML]{DAE8FC}redis(SET) \\ \midrule
+								\cellcolor[HTML]{F8A102}{\color[HTML]{000000}} A (Alan)    & 553354      & 429677      & 307946       & 500548     & 362198      \\ \hline
+								\cellcolor[HTML]{FFFE65}{\color[HTML]{000000}}B (César)  & 988937.98           & 734887.83          & 489798.29           & 936797.44         & 644343.29         \\ \hline
+								\cellcolor[HTML]{34FF34}{\color[HTML]{000000}} C (Edgar)  & 1211505.83  & 1027960.93  & 870849.42    & 1361435    & 951458      \\ \hline
+								\cellcolor[HTML]{9698ED}{\color[HTML]{000000} D(Sandra)} & 2115109.73  & 1710230.42  & 1342941.46   & 2133463    & 1492232     \\ \hline
                             \end{tabular}
-                        \end{center}
                     \end{table} 
                 }
             \end{itemize}
