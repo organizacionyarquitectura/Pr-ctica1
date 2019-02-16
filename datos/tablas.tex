@@ -1,0 +1,35 @@
+%Margenes, idioma y tipo de documento
+\documentclass{article}
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[margin = 1cm]{geometry}
+\usepackage{booktabs}
+
+\begin{document}
+     
+    % Tabla de resultados tiempo de respuesta
+\begin{table}[]
+\begin{tabular}{@{}|l|l|l|l|l|l|l|l|l|@{}}
+\toprule
+Pc / Tareas & build-mplayer & build-php & compress-gzip & dcraw  & encode-flac & gnupg & mafft & mrbayes \\ \midrule
+A (Alan)    & 422.32        & 831.64    & 96.77         & 201.06 & 44.19       & 37.29 & 27.64 & 2548.70 \\ \midrule
+B (Cesar)   & 1             & 2         & 3             & 4      & 5           & 6     & 7     & 8       \\ \midrule
+C (Edgar)   & 3.49          & 295       & 59.49         & 67.86  & 19.93       & 18.99 & 11.21 & 762.99  \\ \midrule
+D (Sandra)  & 2.84          & 217.87    & 47.53         & 53.56  & 13.49       & 14.26 & 8.73  & 625.15  \\ \bottomrule
+\end{tabular}
+\end{table}
+    
+		    
+		    % Tabla de resultados pruebas de rendimiento
+\begin{table}[]
+\begin{tabular}{@{}|l|l|l|l|l|l|@{}}
+\toprule
+Pc / Tareas & redis(LPOP) & redis(SADD) & redis(LPUSH) & redis(GET) & redis(SET) \\ \midrule
+\multicolumn{1}{|l|}{A (Alan)}    & 553354      & 429677      & 307946       & 500548     & 362198     \\ \midrule
+\multicolumn{1}{|l|}{B (Cesar)}  & 9           & 10          & 11           & 12         & 13         \\ \midrule
+\multicolumn{1}{|l|}{C (Edgar)}  & 1211505.83  & 1027960.93  & 870849.42    & 1361435    & 951458     \\ \midrule
+\multicolumn{1}{|l|}{D (Sandra)} & 2115109.73  & 1710230.42  & 1342941.46   & 2133463    & 1492232    \\ \bottomrule
+\end{tabular}
+\end{table}
+	
+\end{document}
