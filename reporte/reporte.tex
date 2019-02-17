@@ -52,7 +52,7 @@ Propiedad/Pc                                   & \cellcolor[HTML]{F8A102}{\color
 \end{table}
 
 
-    \section{Ejerccios}
+    \section{Ejercicios}
 
     \begin{enumerate}
         %1
@@ -132,31 +132,69 @@ Propiedad/Pc                                   & \cellcolor[HTML]{F8A102}{\color
 
                     \begin{table}[]
                         \caption*{Datos de tiempo de respuesta}
-                        \begin{tabular}{|l|l|l|l|l|l|l|l|l|}
-						\toprule
-						Pc / Tareas & \cellcolor[HTML]{DAE8FC}build-mplayer & \cellcolor[HTML]{DAE8FC}build-php & \cellcolor[HTML]{DAE8FC}compress-gzip & \cellcolor[HTML]{DAE8FC}dcraw  & \cellcolor[HTML]{DAE8FC}encode-flac & \cellcolor[HTML]{DAE8FC}gnupg & \cellcolor[HTML]{DAE8FC}mafft & \cellcolor[HTML]{DAE8FC}mrbayes  \\ \hline
-						\cellcolor[HTML]{F8A102}{\color[HTML]{000000}} A (Alan)    & 422.32        & 831.64    & 96.77         & 201.06 & 44.19       & 37.29 & 27.64 & 2548.70  \\ \hline
-						\cellcolor[HTML]{FFFE65}{\color[HTML]{000000}}B (César)   & 5.84             & 547.82         & 78.23             & 160.81      & 50.04           & 41.71     & 24.60     & 1886.59        \\ \hline
-						\cellcolor[HTML]{34FF34}{\color[HTML]{000000}}C (Edgar)   & 3.49          & 295       & 59.49         & 67.86  & 19.93       & 18.99 & 11.21 & 762.99   \\ \hline
-						\cellcolor[HTML]{9698ED}{\color[HTML]{000000} D(Sandra)}  & 2.84          & 217.87    & 47.53         & 53.56  & 13.49       & 14.26 & 8.73  & 625.15   \\ \hline
-\end{tabular}
+                        \begin{tabular}{|l|l|l|l|l|l|l|l|l|l|}
+                        \toprule
+                        Pc / Tareas 
+                        & \cellcolor[HTML]{DAE8FC}build-mplayer 
+                        & \cellcolor[HTML]{DAE8FC}build-php 
+                        & \cellcolor[HTML]{DAE8FC}gzip 
+                        & \cellcolor[HTML]{DAE8FC}dcraw  
+                        & \cellcolor[HTML]{DAE8FC}flac 
+                        & \cellcolor[HTML]{DAE8FC}gnupg 
+                        & \cellcolor[HTML]{DAE8FC}mafft 
+                        & \cellcolor[HTML]{DAE8FC}mrbayes 
+                        & \cellcolor[HTML]{DAE8FC}media arm \\ \hline
+            
+                        \cellcolor[HTML]{F8A102}{\color[HTML]{000000}} 
+                        A (Alan) & 422.32 & 831.64 & 96.77 & 201.06 & 44.19 
+                        & 37.29 & 27.64 & 2548.70 & 76.27\\ \hline
+            
+                        \cellcolor[HTML]{FFFE65}{\color[HTML]{000000}}
+                        B (César) & 5.84 & 547.82 & 78.23 & 160.81 & 50.04 
+                        & 41.71 & 24.60 & 1886.59 & 28.86\\ \hline
+            
+                        \cellcolor[HTML]{34FF34}{\color[HTML]{000000}}
+                        C (Edgar) & 3.49 & 295 & 59.49 & 67.86 & 19.93 & 18.99 
+                        & 11.21 & 762.99 & 15.54\\ \hline
+            
+                        \cellcolor[HTML]{9698ED}{\color[HTML]{000000} 
+                        D(Sandra)} & 2.84 & 217.87 & 47.53 & 53.56 & 13.49 
+                        & 14.26 & 8.73 & 625.15 & 12.19   \\ \hline
+                        \end{tabular}
                     \end{table}
                 }
                 
-                
-                
                 \item {
-                    La medida de rendimiento.\\
+                    La medida de rendimiento.
+
                     \begin{table}[]
                         \caption*{Datos de rendimiento}
-                        \begin{tabular}{|l|l|l|l|l|l|}
-								\toprule
-								Pc / Tareas & \cellcolor[HTML]{DAE8FC}redis(LPOP) & \cellcolor[HTML]{DAE8FC}redis(SADD) & \cellcolor[HTML]{DAE8FC}redis(LPUSH) & \cellcolor[HTML]{DAE8FC}redis(GET) & \cellcolor[HTML]{DAE8FC}redis(SET) \\ \midrule
-								\cellcolor[HTML]{F8A102}{\color[HTML]{000000}} A (Alan)    & 553354      & 429677      & 307946       & 500548     & 362198      \\ \hline
-								\cellcolor[HTML]{FFFE65}{\color[HTML]{000000}}B (César)  & 988937.98           & 734887.83          & 489798.29           & 936797.44         & 644343.29         \\ \hline
-								\cellcolor[HTML]{34FF34}{\color[HTML]{000000}} C (Edgar)  & 1211505.83  & 1027960.93  & 870849.42    & 1361435    & 951458      \\ \hline
-								\cellcolor[HTML]{9698ED}{\color[HTML]{000000} D(Sandra)} & 2115109.73  & 1710230.42  & 1342941.46   & 2133463    & 1492232     \\ \hline
-                            \end{tabular}
+                        \begin{tabular}{|l|l|l|l|l|l|l|}
+                        \toprule
+                            Pc / Tareas 
+                            & \cellcolor[HTML]{DAE8FC}redis(LPOP) 
+                            & \cellcolor[HTML]{DAE8FC}redis(SADD) 
+                            & \cellcolor[HTML]{DAE8FC}redis(LPUSH) 
+                            & \cellcolor[HTML]{DAE8FC}redis(GET)
+                            & \cellcolor[HTML]{DAE8FC}redis(GET)
+                            & \cellcolor[HTML]{DAE8FC}redis(SET) \\ \hline
+            
+                            \cellcolor[HTML]{F8A102}{\color[HTML]{000000}} 
+                            A (Alan) & 553354 & 429677 & 307946 & 500548 
+                            & 362198 & 430744.6\\ \hline
+            
+                            \cellcolor[HTML]{FFFE65}{\color[HTML]{000000}}
+                            B (César) & 988937.98 & 734887.83 & 489798.29 
+                            & 936797.44 & 644343.29 & 758952.97\\ \hline
+            
+                            \cellcolor[HTML]{34FF34}{\color[HTML]{000000}} 
+                            C (Edgar) & 1211505.83 & 1027960.93 & 870849.42 
+                            & 1361435 & 951458 & 1084641.84\\ \hline
+            
+                            \cellcolor[HTML]{9698ED}{\color[HTML]{000000} 
+                            D(Sandra)} & 2115109.73 & 1710230.42 & 1342941.46 
+                            & 2133463 & 1492232 & 1758795.32 \\ \hline
+                        \end{tabular}
                     \end{table} 
                 }
             \end{itemize}
@@ -164,7 +202,78 @@ Propiedad/Pc                                   & \cellcolor[HTML]{F8A102}{\color
         }
         \item {
             Calcula los tiempos normalizados y obtén la medida de tendencia 
-            central adecuada de cada una de las computadoras.
+            central adecuada de cada una de las computadoras. \\
+            Los datos estarán normalizados respecto a la computadora A.
+
+            \begin{table}[]
+                \caption*{Datos de tiempo de respuesta normalizados respecto a A}
+                \begin{tabular}{|l|l|l|l|l|l|l|l|l|l|}
+                \toprule
+                Pc / Tareas 
+                & \cellcolor[HTML]{DAE8FC}build-mplayer 
+                & \cellcolor[HTML]{DAE8FC}build-php 
+                & \cellcolor[HTML]{DAE8FC}gzip 
+                & \cellcolor[HTML]{DAE8FC}dcraw  
+                & \cellcolor[HTML]{DAE8FC}flac 
+                & \cellcolor[HTML]{DAE8FC}gnupg 
+                & \cellcolor[HTML]{DAE8FC}mafft 
+                & \cellcolor[HTML]{DAE8FC}mrbayes 
+                & \cellcolor[HTML]{DAE8FC}media geo \\ \hline
+    
+                \cellcolor[HTML]{F8A102}{\color[HTML]{000000}} 
+                A (Alan) & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 \\ \hline
+    
+                \cellcolor[HTML]{FFFE65}{\color[HTML]{000000}}
+                B (César) & 0.01382 & 0.65872 & 0.80841 & 0.79981 & 1.1323 
+                & 1.1185 & 0.89001 & 0.7402 & 0.51456 \\ \hline
+    
+                
+    
+                \cellcolor[HTML]{34FF34}{\color[HTML]{000000}}
+                C (Edgar) & 0.0082638 & 0.35472 & 0.61475 & 0.33751 & 0.45100 
+                & 0.50925 & 0.40557 & 0.29936 & 0.25332\\ \hline
+    
+                
+    
+                \cellcolor[HTML]{9698ED}{\color[HTML]{000000} 
+                D(Sandra)} & 0.0067247 & 0.26197 & 0.49116 & 0.26638 & 0.30527 
+                & 0.38240 & 0.31584 & 0.24528 & 0.19493 \\ \hline
+    
+                
+                \end{tabular}
+            \end{table}
+    
+            \begin{table}[]
+                \caption*{Datos de rendimiento normalizados respecto a A}
+                \begin{tabular}{|l|l|l|l|l|l|l|}
+                \toprule
+                    Pc / Tareas 
+                    & \cellcolor[HTML]{DAE8FC}redis(LPOP) 
+                    & \cellcolor[HTML]{DAE8FC}redis(SADD) 
+                    & \cellcolor[HTML]{DAE8FC}redis(LPUSH) 
+                    & \cellcolor[HTML]{DAE8FC}redis(GET)
+                    & \cellcolor[HTML]{DAE8FC}redis(GET)
+                    & \cellcolor[HTML]{DAE8FC}redis(SET) \\ \hline
+    
+                    \cellcolor[HTML]{F8A102}{\color[HTML]{000000}} 
+                    A (Alan) & 1 & 1 & 1 & 1 & 1 & 1 \\ \hline
+    
+                    \cellcolor[HTML]{FFFE65}{\color[HTML]{000000}}
+                    B (César) & 1.787170564 & 1.710326199 & 1.590533048 
+                    & 1.871543668 & 1.778980806 & 1.745146036\\ \hline
+    
+    
+                    \cellcolor[HTML]{34FF34}{\color[HTML]{000000}} 
+                    C (Edgar) & 2.189386595 & 2.392403899 & 2.827928988 
+                    & 2.719889002 & 2.626900204 & 2.54052833\\ \hline
+    
+                    \cellcolor[HTML]{9698ED}{\color[HTML]{000000} 
+                    D(Sandra)} & 3.822344702 & 3.980269877 & 4.36096413 
+                    & 4.262254569 & 4.119934401 & 4.104600691 \\ \hline
+    
+                 
+                \end{tabular}
+            \end{table} 
         }
         \item {
             Plantea un caso de uso para una computadora. De acuerdo a los 
