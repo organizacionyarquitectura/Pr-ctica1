@@ -129,7 +129,6 @@ Propiedad/Pc                                   & \cellcolor[HTML]{F8A102}{\color
             \begin{itemize}
                 \item {
                     La medida de tiempo de respuesta.
-
                     \begin{table}[]
                         \caption*{Datos de tiempo de respuesta}
                         \begin{tabular}{|l|l|l|l|l|l|l|l|l|l|}
@@ -279,7 +278,104 @@ Propiedad/Pc                                   & \cellcolor[HTML]{F8A102}{\color
             Plantea un caso de uso para una computadora. De acuerdo a los 
             requerimientos del usuario, pondera loas resultados de las pruebas 
             y obtén la medida de desempeño de cada una de las computadoras de tu
-            equipo.
+            equipo. \\
+            Como caso de uso se propone un desarrollador de software que necesita
+            una computadora personal. \\
+            En este caso no es tan relevante que tenga buen desempeño en 
+            analisis de datos, por lo que el analisis bayesiano y el analisis 
+            genético deberían tener poco peso. \\
+            Herramientas para manipulación de media y archivos son medianamente 
+            importante, pues aunque son indispensables es suficiente con que 
+            funciones aceptablemente. \\
+            La parte más importante serían las pruebas de compilación, pues es 
+            básicamente para lo que se va a usar la computadora. \\
+            En la parte de desempeño, no se requiere que se pueda manejar grandes 
+            cantidades de peticiones, pues el equipo no está pensado para usarse
+            como servidor. Aún así, sería conveniente que tenga un buen desempeño
+            al realizar peticiones, pues esto puede ser útil al realizar pruebas
+            de conexión entre la interfaz de usuario y algún servidor.
+
+            \begin{table}[]
+                \caption*{Pesos para los tiempos de respuesta}
+                \begin{tabular}{|l|l|l|l|l|l|l|l|l|l|}
+                \toprule
+                Pc / Tareas 
+                & \cellcolor[HTML]{DAE8FC}build-mplayer 
+                & \cellcolor[HTML]{DAE8FC}build-php 
+                & \cellcolor[HTML]{DAE8FC}gzip 
+                & \cellcolor[HTML]{DAE8FC}dcraw  
+                & \cellcolor[HTML]{DAE8FC}flac 
+                & \cellcolor[HTML]{DAE8FC}gnupg 
+                & \cellcolor[HTML]{DAE8FC}mafft 
+                & \cellcolor[HTML]{DAE8FC}mrbayes \\ \hline
+    
+                \cellcolor[HTML]{F8A102}{\color[HTML]{000000}} 
+                Pesos & 0.25 & 0.25 & 0.1 & 0.1 & 0.1 & 0.1 & 0.05 & 0.25 \\ \hline
+
+                \end{tabular}
+            \end{table}
+
+            \begin{table}[]
+                \caption*{Medidas de tendencia de tiempo de respuesta ponderadas}
+                \begin{tabular}{|l|l|l|l|l|l|l|l|l|l|}
+                \toprule
+                Pc / Tareas 
+                & \cellcolor[HTML]{DAE8FC}media arm \\ \hline
+    
+                \cellcolor[HTML]{F8A102}{\color[HTML]{000000}} 
+                A (Alan) & 129.379742225352 \\ \hline
+    
+                \cellcolor[HTML]{FFFE65}{\color[HTML]{000000}}
+                B (César) & 23.1993219253364  \\ \hline
+    
+                \cellcolor[HTML]{34FF34}{\color[HTML]{000000}}
+                C (Edgar) & 13.2294491005755 \\ \hline
+    
+                \cellcolor[HTML]{9698ED}{\color[HTML]{000000} 
+                D(Sandra)} & 10.5541413519385 \\ \hline
+    
+                \end{tabular}
+            \end{table}
+
+            \begin{table}[]
+                \caption*{Pesos para las pruebas de desempeño}
+                \begin{tabular}{|l|l|l|l|l|l|l|}
+                \toprule
+                    Pc / Tareas 
+                    & \cellcolor[HTML]{DAE8FC}redis(LPOP) 
+                    & \cellcolor[HTML]{DAE8FC}redis(SADD) 
+                    & \cellcolor[HTML]{DAE8FC}redis(LPUSH) 
+                    & \cellcolor[HTML]{DAE8FC}redis(GET)
+                    & \cellcolor[HTML]{DAE8FC}redis(SET) \\ \hline
+    
+                    \cellcolor[HTML]{F8A102}{\color[HTML]{000000}} 
+                    Pesos & 0.25 & 0.15 & 0.15 & 0.15 & 0.3 \\ \hline
+
+                \end{tabular}
+            \end{table} 
+
+            \begin{table}[]
+                \caption*{Medidias de tendencias de desempeño ponderadas}
+                \begin{tabular}{|l|l|l|l|l|l|l|}
+                \toprule
+                    Pc / Tareas 
+                    & \cellcolor[HTML]{DAE8FC}media arit \\ \hline
+    
+                    \cellcolor[HTML]{F8A102}{\color[HTML]{000000}} 
+                    A (Alan) & 432723.55 \\ \hline
+    
+                    \cellcolor[HTML]{FFFE65}{\color[HTML]{000000}}
+                    B (César) & 764760.016 \\ \hline
+    
+    
+                    \cellcolor[HTML]{34FF34}{\color[HTML]{000000}} 
+                    C (Edgar) & 1077350.66\\ \hline
+    
+                    \cellcolor[HTML]{9698ED}{\color[HTML]{000000} 
+                    D(Sandra)} & 1754442.2645 \\ \hline
+            
+                \end{tabular}
+            \end{table} 
         }
     \end{enumerate}
 
@@ -288,23 +384,34 @@ Propiedad/Pc                                   & \cellcolor[HTML]{F8A102}{\color
     \begin{enumerate}
         \item {
             ¿Cuál computadora tiene el mejor tiempo de ejecución? ¿Porqué 
-        factor es mejor computadora comparado a la peor?
+        factor es mejor computadora comparado a la peor? \\
+        El tiempo de ejecución de la computadora A es 0.19493 peor que la 
+        computadora D.
         }
         \item {
             ¿Cuál computadora tiene el mejor desempeño? ¿Porqué 
-        factor es mejor la computadora comparado a la peor?
+        factor es mejor la computadora comparado a la peor? \\
+        El rendimiento de la computadora A es 4.104600691 mejor veces que la 
+        computadora B.
         }
         \item {
             De acuerdo a la referencia ¿cuál computadora tiene el mejor desempeño
-            y cuál tiene el peor desempeño?
+            y cuál tiene el peor desempeño? \\
+            La computadora D tiene el mejor desempeño y la A tiene el mejor 
+            desempeño.
         }
         \item {
             ¿Cuál computadora tiene el mejor desempeño para el usuario planteado
-            en el caso de uso?
+            en el caso de uso? \\
+            La computadora D tiene el mejor desempeño y la A tiene el mejor 
+            desempeño.
         }
         \item {
             De los atributos de cada máquina, ¿cuáles resultan determinantes en 
-            la pérdida o ganancia de desempeño?
+            la pérdida o ganancia de desempeño? \\
+            Los atributos que parecen más influyentes son la cantidad de hilos 
+            de ejecución y la cantidad de memoria RAM, y en menor medida la 
+            velocidad del procesador y de la tarjeta gráfica.
         }
     \end{enumerate}
 
