@@ -55,7 +55,7 @@ Propiedad/Computadora                                   & \cellcolor[HTML]{F8A10
 \end{tabularx}
 \end{table}
 
-
+	%Ejercicios de la práctica
     \section{Ejercicios}
 
     \begin{enumerate}
@@ -115,6 +115,8 @@ Propiedad/Computadora                                   & \cellcolor[HTML]{F8A10
                 }
             \end{itemize}
         }
+        
+        %2
         \item {
             Usando la medida de tendencia central adecuada y tu reporte de 
             resultados, calcula            
@@ -191,6 +193,8 @@ Propiedad/Computadora                                   & \cellcolor[HTML]{F8A10
             \end{itemize}
             
         }
+        
+        %3
         \item {
             Calcula los tiempos normalizados y obtén la medida de tendencia 
             central adecuada de cada una de las computadoras. \\
@@ -201,7 +205,7 @@ Propiedad/Computadora                                   & \cellcolor[HTML]{F8A10
                 \caption*{Datos de tiempo de respuesta normalizados respecto a A}
                 \begin{tabular}{|l|l|l|l|l|l|l|l|l|l|}
                 \toprule
-                Computadora / Pruebas 
+                Compu/Pruebas 
                 & \cellcolor[HTML]{DAE8FC}build-mplayer 
                 & \cellcolor[HTML]{DAE8FC}build-php 
                 & \cellcolor[HTML]{DAE8FC}gzip 
@@ -210,7 +214,7 @@ Propiedad/Computadora                                   & \cellcolor[HTML]{F8A10
                 & \cellcolor[HTML]{DAE8FC}gnupg 
                 & \cellcolor[HTML]{DAE8FC}mafft 
                 & \cellcolor[HTML]{DAE8FC}mrbayes 
-                & \cellcolor[HTML]{DAE8FC}media geométrica \\ \hline
+                & \cellcolor[HTML]{DAE8FC}media geo \\ \hline
     
                 \cellcolor[HTML]{F8A102}{\color[HTML]{000000}} 
                 A (Alan) & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 \\ \hline
@@ -267,6 +271,8 @@ Propiedad/Computadora                                   & \cellcolor[HTML]{F8A10
                 \end{tabular}
             \end{table} 
         }
+        
+        %4
         \item {
             Plantea un caso de uso para una computadora. De acuerdo a los 
             requerimientos del usuario, pondera los resultados de las pruebas 
@@ -312,7 +318,7 @@ Propiedad/Computadora                                   & \cellcolor[HTML]{F8A10
                 \end{center}
             \end{table}
 
-			Para obtener la media armónica ponderada seguimos la siguiente fórmula: $\sum_{i=1}^{n} w_{i} \div \sum_{i=1}^{n} (w_{i} \div x_{i})$ \\
+			Para obtener la media armónica ponderada\cite{armonicaponderada} seguimos la siguiente fórmula: $\sum_{i=1}^{n} w_{i} \div \sum_{i=1}^{n} (w_{i} \div x_{i})$ \\
 			donde w representan los pesos, x los datos y la suma de los pesos es igual a 1.
             \begin{table}[H]
                 \caption*{Medidas de tendencia de tiempo de respuesta ponderadas}
@@ -387,8 +393,9 @@ Propiedad/Computadora                                   & \cellcolor[HTML]{F8A10
     \end{enumerate}
 
     \section{Preguntas}
-
+	%Preguntas en el reporte
     \begin{enumerate}
+    	%1
         \item {
         ¿Cual computadora tiene el mejor tiempo de ejecución?\\
          La computadora D tiene el mejor tiempo de ejecución de acuerdo a nuestras medidas de desempeño.\\
@@ -401,6 +408,7 @@ Propiedad/Computadora                                   & \cellcolor[HTML]{F8A10
           Porque al dividir sus medias armónicas tenemos $\frac{76.2660601835012}{12.1799911458345} = 6.26158584766984$\\
         }
         
+        %2
         \item {
         ¿Cual computadora tiene el mejor rendimiento?\\
          La computadora D tiene el mejor rendimiento de acuerdo a nuestras medidas de desempeño.\\
@@ -414,7 +422,7 @@ Propiedad/Computadora                                   & \cellcolor[HTML]{F8A10
                
         }
        
-       
+       %3
         \item {
         De acuerdo a la computadora de referencia, ¿cuál computadora tiene el
 mejor desempeño y cuál tiene el peor desempeño? \\
@@ -423,6 +431,7 @@ mejor desempeño y cuál tiene el peor desempeño? \\
 			Porque la media geométrica de D al parametrizar el rendimiento es la mayor mientras que la de la computadora A es el menor y la media geométrica de D al parametrizar el tiempo de respuesta es la menor mientras que la de la computadora A era el mayor. Hay que recordar que usamos LIB para el tiempo y BIB para el rendimiento. También tomamos la media geométrica como base de comparación porque no se sesga ante valores normalizados, los cuales estamos utilizando.\\
         }
         
+        %4
         \item {
             ¿Cuál computadora tiene el mejor desempeño para el usuario planteado
             en el caso de uso? \\
@@ -431,6 +440,7 @@ mejor desempeño y cuál tiene el peor desempeño? \\
           Debido a que su media aritmética ponderada es la mayor y su media armónica ponderada es la menor. Hay que recordar que usamos LIB para la media armónica que mide al tiempo de ejecución y BIB para la media aritmética que mide el rendimiento. Utilizamos medias ponderadas ya que de esta forma podemos estar seguros que el usuario tendrá lo que mejor le convenga de acuerdo a sus necesidades, dandole mayor peso a las pruebas que más necesita.\\
         }
         
+        %5
         \item {
             De los atributos de cada máquina, ¿cuáles resultan determinantes en 
             la pérdida o ganancia de desempeño? \\
@@ -441,11 +451,9 @@ mejor desempeño y cuál tiene el peor desempeño? \\
         }
     \end{enumerate}
     
-    \section{Bibliografía}
-    
-    
 
-\begin{thebibliography}{9}
+%Damos las referencias utilizadas en formato APA
+\begin{thebibliography}{1}
 
 \bibitem{armonicaponderada}
 Cal, E. (2019). Mathematics and Applied Statistics Lesson of the Day – The Weighted Harmonic Mean.\\ 
